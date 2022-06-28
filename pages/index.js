@@ -19,6 +19,7 @@ export default function Home(props) {
         <h1 className="mx-auto font-serif text-center text-sky-400 hover:text-sky-300">
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.google.com/search?q=demo&stick=H4sIAAAAAAAAAONgU1I1qDC2NEgxtDQwT04ySEsySTG1MqgwMTQxtTQ1tkw1TDE1tkhMXMTKkpKamw8A1RfuOzAAAAA&hl=en&mat=CX1rQIhyBB60ElcBT5f1BupPNVF9XYK6W-okx23TSXzS9bC-eLl3JamK88sFlt9toPM2M-4-sKBAlS4in9tkHumJcsPQ9f50lSDGCaDNn2pB3fS3zmDAMfyxacGr0r0ALto&authuser=0"
           >
             DEMO GOOGLE BUSINESS PAGE
