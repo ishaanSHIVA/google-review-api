@@ -53,6 +53,8 @@ export default function Home(props) {
               </div>
             );
           })}
+
+        {props.error && <h1>{props.error}</h1>}
       </div>
     </div>
   );
@@ -70,5 +72,9 @@ export async function getStaticProps() {
       },
     };
   }
-  console.error("Error");
+  return {
+    props: {
+      error: "error",
+    },
+  };
 }
