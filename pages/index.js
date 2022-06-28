@@ -61,11 +61,10 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  console.log(process.env);
   const response = await axios.get(
     `https://maps.googleapis.com/maps/api/place/details/json?placeid=${process.env.GOOGLE_MAPS_PLACE_ID}&key=${process.env.GOOGLE_MAPS_API_KEY}`
   );
-  console.log("Response ", response);
+  console.log("Response ", response["data"]);
 
   if (response) {
     console.log(response["data"]["result"]["reviews"]);
@@ -79,5 +78,6 @@ export async function getStaticProps() {
     props: {
       error: "error",
     },
+    revalidate: 10,
   };
 }
