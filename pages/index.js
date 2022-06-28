@@ -64,11 +64,12 @@ export async function getStaticProps() {
   const response = await axios.get(
     `https://maps.googleapis.com/maps/api/place/details/json?placeid=${process.env.GOOGLE_MAPS_PLACE_ID}&key=${process.env.GOOGLE_MAPS_API_KEY}`
   );
-  if (response.statusCode === 200) {
-    console.log(response["data"]["result"]["reviews"]);
+  const data = JSON.stringify(response);
+  if (data) {
+    console.log(data["data"]["result"]["reviews"]);
     return {
       props: {
-        reviews: response["data"]["result"]["reviews"],
+        reviews: data["data"]["result"]["reviews"],
       },
     };
   }
