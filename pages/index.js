@@ -44,7 +44,10 @@ export default function Home(props) {
           reviews.map((review) => {
             console.log("State review ", review);
             return (
-              <div className="border border-yellow-500 mx-auto max-w-xs">
+              <div
+                key={review["text"]}
+                className="border border-yellow-500 mx-auto max-w-xs"
+              >
                 <h2>{review["author_name"]}</h2>
                 <a href={review["author_url"]}>{review["text"]}</a>
               </div>
